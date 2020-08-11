@@ -2,33 +2,23 @@ var umlRenderer = (function () {
     "use strict";
     return {
         renderContent: function(rawContent, options) {
-            
-
-
-            var render_ux = document.getElementById("notebook-display");
+            //console.log("******** umlRenderer ************ ");
+            //console.log(rawContent);
 
             try 
             {
-            	render_ux = rawContent + "<br><br><br> COMPRESS: " + compress(rawContent)
+                let res = compress(rawContent);
+                document.getElementById("diagram-img").src=res
+                console.log(res);
             }
             catch (err)
             {
                 console.log(err);
-
-                var errMsg;
-                
-                // parsing failure
+                let errMsg;
                 errMsg = "Fail render";
                 
-
                 render_ux = errMsg
             }
-            /*var validFormedJson = false;
-            var jsonPayload;
-                jsonPayload = JSON.parse(rawContent);
-                validFormedJson = true;
-                nbv.render(jsonPayload, render_ux);
-            }*/
         }
     };
 }());

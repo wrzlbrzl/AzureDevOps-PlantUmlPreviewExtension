@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "plantuml-viewer",
-    "version": "0.0.2",
+    "version": "0.0.11",
     "name": "PlantUML viewer",
     "description": "PlantUML viewer",
     "publisher": "IvanVarnavskiy",
@@ -13,7 +13,7 @@
     ],
     "contributions": [
         {
-            "id": "plantuml-viewer",
+            "id": "plant_uml_renderer",
             "type": "ms.vss-code-web.content-renderer",
             "description": "Отображение UML-диаграмм",
             "targets": [
@@ -28,7 +28,28 @@
                     "text/html"
                 ],
                 "defaultBehavior": "showRenderedContent",
-                "registeredObjectId": "plantuml-viewer"
+                "registeredObjectId": "plant_uml_renderer"
+            }
+        },
+        {
+            "id": "plantuml-server",
+            "description": "Service endpoint type for PlantUml connections",
+            "type": "ms.vss-endpoint.service-endpoint-type",
+            "targets": [ "ms.vss-endpoint.endpoint-types" ],
+            "properties": {
+                "name": "plantuml",
+                "displayName": "PlantUml server connection",
+                "url": {
+                    "displayName": "Server Url",
+                    "helpText": "Url for the PlantUml server to connect to."
+                },
+                "dataSources": [],
+                "authenticationSchemes": [
+                    {
+                        "type": "ms.vss-endpoint.endpoint-auth-scheme-token"
+                    }
+                ],
+                "helpMarkDown": "<a href=\"url-to-documentation\" target=\"_blank\"><b>Learn More</b></a>"
             }
         }
     ],
