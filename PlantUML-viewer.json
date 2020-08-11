@@ -1,0 +1,66 @@
+{
+    "manifestVersion": 1,
+    "id": "plantuml-viewer",
+    "version": "0.0.2",
+    "name": "PlantUML viewer",
+    "description": "PlantUML viewer",
+    "publisher": "IvanVarnavskiy",
+    "public": false,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "plantuml-viewer",
+            "type": "ms.vss-code-web.content-renderer",
+            "description": "Отображение UML-диаграмм",
+            "targets": [
+                "ms.vss-code-web.content-renderer-collection"
+            ],
+            "properties": {
+                "uri": "umlrender.html",
+                "fileExtensions": [
+                    "wsd"
+                ],
+                "mimeTypes": [
+                    "text/html"
+                ],
+                "defaultBehavior": "showRenderedContent",
+                "registeredObjectId": "plantuml-viewer"
+            }
+        }
+    ],
+    "scopes": [
+        "vso.code"
+    ],
+    "categories": [
+        "Azure Repos"
+    ],
+    "tags": [
+        "PlantUML",
+        "UML",
+        "Diagram",
+        "preview"
+    ],
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/Iloer"
+    },
+    "files": [
+        {
+            "path": "umlrender.html",
+            "addressable": true
+        },        
+        {
+            "path": "scripts",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib", 
+            "addressable": true,
+            "packagePath": "lib"
+        }
+    ]
+}

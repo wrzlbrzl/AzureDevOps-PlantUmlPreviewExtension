@@ -1,0 +1,19 @@
+{
+  "name": "plantuml-viewer-extension",
+  "version": "0.0.1",
+  "description": "",
+  "main": "umlrender.html",
+  "scripts": {
+    "package-extension": "tfx extension create --rev-version --manifest-globs PlantUML-viewer.json",
+    "publish-extension": "tfx extension publish --manifest-globs PlantUML-viewer.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Iloer"
+  },
+  "author": "Ivan Varnavskiy",
+  "license": "MIT",
+  "dependencies": {
+    "vss-web-extension-sdk": "^5.141.0"
+  }
+}
