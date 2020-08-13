@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
     "id": "plantuml-viewer",
-    "version": "0.0.32",
+    "version": "0.0.3",
     "name": "PlantUML viewer",
     "description": "PlantUML viewer",
-    "publisher": "IvanVarnavskiy",
+    "publisher": "shtormtech",
     "public": false,
     "targets": [
         {
@@ -65,16 +65,25 @@
         "UML",
         "Diagram",
         "preview"
-    ],
+    ],    
+    "content": {
+        "details": {
+        "path": "overview.md"
+        }
+    },
     "repository": {
         "type": "git",
-        "uri": "https://github.com/Iloer/AzureDevOps-PlantUmlPreviewExtension"
+        "uri": "https://github.com/shtormtech/AzureDevOps-PlantUmlPreviewExtension"
     },
     "files": [
         {
             "path": "umlrender.html",
             "addressable": true
-        },        
+        },      
+        {
+            "path": "spinner.css",
+            "addressable": true
+        },
         {
             "path": "scripts",
             "addressable": true

@@ -1,0 +1,101 @@
+/* ===
+By : Sahar Ali Raza
+Year: 2018 - 2019
+Please do not copy this part of CSS Because it is
+Demo code for page layout === */
+
+body{
+    margin:0;
+    padding:0;
+  }
+  
+  .xmas_back{
+     background: radial-gradient(circle at center, skyblue 10%,  #fff 100%);
+  }
+  
+  .close1 {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+    cursor: pointer;
+    color: #000000;
+  }
+  
+  /* ======= PreLoader CSS Start  ========*/
+  
+  /* 
+  /*=== mask === */
+  /*-- This code is for mask over all web content which will be 
+  fade out when your webpage get loaded. 
+   --*/
+  #mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* you can change color of mask here*/
+    background: #f3f3f3;
+    z-index: 99;
+    /* makes sure it stays on top */
+  }
+  
+  /*=== extra preloading text=== */
+  /** this code can be use for adding loading text under preloader */
+  #laoding_text {
+    display: block;
+    position: absolute;
+    font-family: sans-serif,arial;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 50px 0 0 -25px;
+    padding: 2px 0;
+  }
+  
+  /* === main 50 preloaders code begins === */
+  /**===== circle2 =====*/
+  #spinner {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    margin: -25px 0 0 -25px;
+    border: 4px #c8e2f5 solid;
+    border-top: 4px #067bd8 solid;
+    border-radius: 50%;
+    -webkit-animation: spin2 1s infinite linear;
+            animation: spin2 1s infinite linear;
+  }
+  
+  @-webkit-keyframes spin2 {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+    }
+  }
+  @keyframes spin2 {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+    }
+  }
+  /** END of circle2 */
+  

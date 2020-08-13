@@ -7,11 +7,14 @@
     <script src="scripts/rawdeflate.js"></script>
     <script src="scripts/umlcompress.js"></script>
     <script src="scripts/umlrenderer.js"></script>
+    <link rel="stylesheet" type="text/css" href="spinner.css" media="screen" />
 </head>
-<body style="overflow-y: scroll">
+<body style="overflow-y: scroll;overflow-x: scroll;">
     <div id="render-content-display">       
-        <div id="container" class="container container-main" style="overflow-x: auto;">
-            
+        <div id="container" class="container container-main">
+            <div class="col-sm-2">
+                <div id="spinner"></div>
+            </div>
         </div>
     </div>
 </body>

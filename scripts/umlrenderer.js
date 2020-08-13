@@ -18,14 +18,12 @@ var umlRenderer = (function () {
                                 return res3.text()
                             })
                             .then((res2) => {
-                                console.log("res2");
-                                console.log(res2);
+                                document.getElementById("spinner").style.display = "none"
                                 document.getElementById("container").innerHTML = res2
                             })
                             .catch((err) => {
                                 console.error(err)
-                            })                            
-
+                            }) 
                             console.log('resultURL: ' + plant_uml_server+res);
 
                         })
