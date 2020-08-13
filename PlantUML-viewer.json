@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "plantuml-viewer",
-    "version": "0.0.11",
+    "version": "0.0.32",
     "name": "PlantUML viewer",
     "description": "PlantUML viewer",
     "publisher": "IvanVarnavskiy",
@@ -54,7 +54,8 @@
         }
     ],
     "scopes": [
-        "vso.code"
+        "vso.code",
+        "vso.serviceendpoint_query"
     ],
     "categories": [
         "Azure Repos"
@@ -67,7 +68,7 @@
     ],
     "repository": {
         "type": "git",
-        "uri": "https://github.com/Iloer"
+        "uri": "https://github.com/Iloer/AzureDevOps-PlantUmlPreviewExtension"
     },
     "files": [
         {

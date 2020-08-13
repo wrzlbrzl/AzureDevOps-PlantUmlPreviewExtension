@@ -53,6 +53,6 @@ return '?';
 function compress(s) {
   //UTF8
   s = unescape(encodeURIComponent(s));
-  return "http://www.plantuml.com/plantuml/svg/"+encode64(deflate(s, 9));
+  return "/svg/"+encode64(deflate(s, 9));
   //$('im').src = "http://www.plantuml.com/plantuml/img/"+encode64(deflate(s, 9));
 }
