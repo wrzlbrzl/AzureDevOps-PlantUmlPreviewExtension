@@ -1,5 +1,5 @@
 var umlRenderer = (function () {
-    "use strict";
+    "use strict"
     return {
         renderContent: function(rawContent, options) {
 
@@ -9,11 +9,10 @@ var umlRenderer = (function () {
                     console.log(serviceEndpointService.getClient())
                     serviceEndpointService.getClient().getServiceEndpoints(VSS.getWebContext().project.name,'plantuml')
                         .then((result) => {
-                            let plant_uml_server = result[0].url;
+                            let plant_uml_server = result[0].url
 
-                            let res = compress(rawContent);
-                            
-                            fetch(plant_uml_server+res)
+                            let diagramUrl = plant_uml_server+compress(rawContent)
+                            fetch(diagramUrl)
                             .then((res3) => {
                                 return res3.text()
                             })
@@ -22,26 +21,27 @@ var umlRenderer = (function () {
                                 document.getElementById("container").innerHTML = res2
                             })
                             .catch((err) => {
+                                document.getElementById("container").innerHTML = `<h2 style=" color: red;">Не удалось загурзить диаграмму:</h2> ${diagramUrl}`
                                 console.error(err)
+                                document.getElementById("spinner").style.display = "none"
                             }) 
-                            console.log('resultURL: ' + plant_uml_server+res);
-
+                            console.log('resultURL: ' + diagramUrl)
                         })
-                        .catch((err) => {console.error(err)});        
-                });           
+                        document.getElementById("container").innerHTML = 'Не удалось получить адрес сервера PlantUML.'
+                        .catch((err) => {console.error(err)})     
+                        document.getElementById("spinner").style.display = "none"
+                })          
                 
             }
             catch (err)
             {
-                console.log(err);
-                let errMsg;
-                errMsg = "Fail render";
-                
-                render_ux = errMsg
+                console.log(err)
+                errMsg = "Fail render"
+                document.getElementById("spinner").style.display = "none"
             }
         }
-    };
-}());
+    }
+}())
 
 VSS.init({
     usePlatformScripts: true, 

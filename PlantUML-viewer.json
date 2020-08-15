@@ -1,11 +1,11 @@
 {
     "manifestVersion": 1,
     "id": "plantuml-viewer",
-    "version": "0.0.3",
+    "version": "0.0.6",
     "name": "PlantUML viewer",
     "description": "PlantUML viewer",
     "publisher": "shtormtech",
-    "public": false,
+    "public": true,
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -53,6 +53,9 @@
             }
         }
     ],
+    "icons": {
+        "default": "icon.png"
+    },
     "scopes": [
         "vso.code",
         "vso.serviceendpoint_query"
