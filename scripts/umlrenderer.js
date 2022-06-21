@@ -27,7 +27,7 @@ var umlRenderer = (function () {
                             }) 
                             console.log('resultURL: ' + diagramUrl)
                         })
-                        document.getElementById("container").innerHTML = 'Не удалось получить адрес сервера PlantUML.'
+                        document.getElementById("container").innerHTML = 'Failed to get PlantUML server address'
                         .catch((err) => {console.error(err)})     
                         document.getElementById("spinner").style.display = "none"
                 })          

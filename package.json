@@ -1,6 +1,6 @@
 {
   "name": "plantuml-viewer-extension",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "umlrender.html",
   "scripts": {
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Iloer"
+    "url": "https://github.com/wrzlbrzl/AzureDevOps-PlantUmlPreviewExtension"
   },
-  "author": "Ivan Varnavskiy",
+  "author": "Ivan Varnavskiy, Martin Dahl",
   "license": "MIT",
   "dependencies": {
     "vss-web-extension-sdk": "^5.141.0"
