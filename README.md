@@ -8,4 +8,4 @@ UML diagram image rendering occurs on the external Plantuml server. This can be 
 
 forked from https://github.com/Iloer/AzureDevOps-PlantUmlPreviewExtension
 
-This project is licensed under the terms of the MIT license.
+
